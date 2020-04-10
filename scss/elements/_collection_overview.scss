@@ -1,0 +1,116 @@
+.collection {
+	
+	.collection_hero {
+		@include clearfix;
+		background-color: $black;
+		display: flex;
+		
+		.left {
+			width: 60%;
+			float: left;
+			border-right: 10px solid $lightGreen;
+			
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		
+		.right {
+			width: 40%;
+			float: left;
+			height: 100%;
+			margin-right: 0px;
+			padding: 0px 40px;
+			position: absolute;
+			top: 25%;
+			
+			h2 {
+				@include montserrat;
+				color: $white;
+				text-transform: uppercase;
+				font-size: 18px;
+			}
+			
+			p {
+				@include avenir;
+				font-size: 9px;
+				color: $white;
+			}
+		}
+	}
+	
+	.product_grid {
+		padding-top: 75px;
+		
+		.product_desc {
+			width: 40%;
+			float: left;
+			padding: 0 2em;
+			
+			h2 {
+				@include montserrat;
+				font-size: 18px;
+			}
+			
+			p {
+				@include avenir;
+				font-size: 10px;
+			}
+		}
+		
+		.product {
+			width: 20%;
+			float: left;
+			padding: .3125em .3125em 1em;
+			
+			
+			.add_to_wish_list {
+				position: absolute;
+				bottom: 60px;
+				right: 60px;
+				
+				.add_to_wish_list_button {
+					content: "";
+					background-image: url("../images/heart_icon_sprite.png");
+					right: -25px;
+					margin-top: -8px;
+					background-repeat: no-repeat;
+					overflow: hidden;
+					display: block;
+					width: 16px;
+					height: 15px;
+				}
+			}
+			
+			.info {
+				padding: 0px 15px; 
+				
+				span {
+					@include avenir;
+					font-weight: bold;
+					font-size: 10px;
+					display: inline-block;
+				}
+				
+				p {
+					@include avenir;
+					font-size: 10px;
+					display: inline-block;
+					padding-left: 15px;
+				}
+			}
+			
+			a {
+				@include clearfix;
+			}
+			
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+	}
+}

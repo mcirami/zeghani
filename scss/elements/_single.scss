@@ -1,0 +1,14 @@
+.image_left {
+	@include span-columns(7);
+}
+
+.content_right {
+	@include span-columns(5);
+	padding: 20px;
+	
+	p {
+		@include avenir;
+		font-size: 10px;
+		margin-bottom: 10px;
+	}
+}

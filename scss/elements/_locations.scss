@@ -1,0 +1,64 @@
+.locations {
+	margin-top: 20px;	
+}
+
+.stores_container {
+	@include span-columns(3);
+	
+	#store-info {
+		@include span-columns(12);
+	}
+	
+	form {
+		@include span-columns(12);
+		margin-bottom: 10px;
+		
+		input[type="text"] {
+			@include span-columns(10);
+			border: 1px solid #959595;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+			padding: 4px 10px;
+		}
+		
+		input[type="submit"] {
+			@include span-columns(2);
+			background: none;
+			background-color: #cccccc;
+			border: 1px solid #959595;
+			padding: 4px 0;
+			text-transform: uppercase;
+		}
+	}
+}
+
+#map {
+	min-height: 833px;
+	@include span-columns(9);
+	
+	@include media($tablet){
+		width: 100%;
+	}
+}
+
+.store_result_wrap {
+	border: 1px solid $lightGreen;
+	padding: 10px;
+	
+	.store {
+		
+		h2 {
+			@include montserratBold;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+		}
+		
+		p {
+			@include montserrat;
+			font-size: 1em;
+			text-transform: uppercase;
+		}
+	}
+}

@@ -1,0 +1,161 @@
+// Collection Overview
+.collections_overview {
+	@include clearfix;
+	display: flex;
+	margin-bottom: 40px;
+	
+	@include media($lessTablet) {
+		display: block;
+	}
+}
+
+.collections_grid {
+	float: left;
+	width: 62%;
+	
+	@include media($break840) {
+		width: 50%;
+	}
+	
+	@include media($lessTablet) {
+		width: 100%;
+	}
+	
+	ul {
+		list-style-type: none;
+		
+		a {
+			display: block;
+		}
+		
+		li {
+			&:hover {
+				a {
+					color: $white;
+				}
+				
+				h3 {
+					background: url('../images/small-chevron-hover.png') right top no-repeat;
+					background-size: 11px 10px;
+				}
+			}
+			
+			a {
+				display: block;
+				color: $black;
+			}
+		}
+	}
+	.collection_box {
+		width: 33%;
+		float: left;
+		margin: 0 .5% .5% 0;
+		
+		&:nth-child(3n) {
+			margin: 0 0 .5% 0;
+		}
+		
+		&:nth-child(n+4) {
+			margin-bottom: 0px;
+		}
+		
+		@include media($mobile) {
+			@include omega();
+			width: 49%;
+			margin: 0 2% 2% 0;
+			
+			&:nth-child(3n) {
+				margin: 0 2% 2% 0;
+			}
+			
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			
+		}
+		
+		img {
+			display: block;
+		}
+		
+		.collection_title {
+			text-align: center;
+			background: $lightGreen;
+			padding: 5px 0 5px 0;
+			line-height: 1;
+		}
+		
+		h3 {
+			margin: 0;
+			font-size: .75em;
+			line-height: 1;
+			text-transform: uppercase;
+			padding-right: 20px;
+			display: inline-block;
+			background: url('../images/small-chevron.png') right top no-repeat;
+			background-size: 11px 10px;
+			
+			@include media($break840) {
+				font-size: .4em;
+				padding-right: 10px;
+				background-size: 8px 7px;
+			}
+		}
+	}
+}
+
+.collections_description {
+	float: left;
+	width: 38%;
+	background: $black;
+	border-left: solid 5px $lightGreen;
+	color: $white;
+	padding: 0 40px;
+	font-size: 10px;
+	line-height: 2;
+	display: flex;
+	align-items: center;
+	
+	@include media($break940) {
+		padding: 0 15px;
+	}
+	
+	@include media($break840) {
+		width: 50%;
+	}
+	
+	@include media($tablet) {
+		padding: 0 10px;
+		border-left-width: 3px;
+	}
+	
+	@include media($lessTablet) {
+		width: 100%;
+		border-left-width: 0px;
+		padding: 20px;
+	}
+	
+	h1 {
+		font-size: 18px;
+		line-height: 1.25;
+		
+		@include media($break940) {
+			font-size: 15px;
+		}
+	}
+	
+	.quiz_button_cta {
+		text-align: right;
+		text-transform: uppercase;
+		margin-top: 20px;
+		
+		@include media($break840) {
+			margin-top: 10px;
+		}
+		
+		span {
+			font-weight: bold;
+			margin-right: 5px;
+		}
+	}
+}

@@ -1,0 +1,145 @@
+#global_footer {
+	@include span-columns(12);
+	min-height: 300px;
+	background-color: $black;
+	color: $white;
+	text-transform: uppercase;
+	padding: 60px 0 40px;
+	
+	a {
+		text-transform: uppercase;
+		color: $white;
+	}
+	
+	ul {
+		list-style: none;
+	}
+	
+	h4 {
+		@include montserrat;
+		margin-top: 0;
+		font-weight: normal;
+		margin-bottom: 18px;
+	}
+	
+	.column {
+		@include span-columns(2);
+		
+		&.social_media {
+			@include span-columns(1.2);
+			margin-right: 5.8%;
+			
+			.image_wrap {
+				width: 35%;
+				margin-right: 8px;
+				float: left;
+				
+				&:nth-child(2n) {
+					clear: left;
+				}
+				
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		
+		&.footer_form {
+			width: 21.6%;
+			padding-left: 10px;
+			margin-right: 0 !important;
+			
+			h4 {
+				margin-bottom: 0;
+			}
+			
+			.gform_wrapper {
+				width: 100%;
+				margin-top: 10px;
+				
+				.gfield_label {
+					@include avenir;
+					text-transform: none;
+					font-size: 11px;
+					margin-bottom: 15px !important
+				}
+				
+				.large {
+					width: 100% !important;
+					padding: 8px !important;
+					font-size: 12px;
+				}
+				
+				.gform_footer {
+					margin: 0;
+					padding-top: 10px;
+				}
+				
+				input[type="submit"] {
+					background: $lightGreen;
+					color: $black;
+					text-transform: uppercase;
+					padding: .65em;
+					border: none;
+					font-size: .875em !important;
+					float: right;
+				
+					&:hover {
+					   	background: darken($lightGreen, 10%);
+					    transition: background-color 0.5s ease-out;
+					}
+				}
+			}
+	
+		}
+	}
+}
+
+.footer_nav_wrap {
+	@include span-columns(7.8);
+	margin-right: 0;
+	
+	& > ul {
+		width: 100%;
+		display: inline-block;
+		
+		& > li {
+			@include span-columns(3);
+			
+			a {
+				@include avenir;
+				font-size: 12px;
+			}
+			
+			& > a {
+				@include montserrat;
+				display: block;
+				font-size: 16px;
+				padding-bottom: 10px;
+				
+			}
+		}
+	}
+}
+
+.footer_bottom {
+	@include span-columns(12);
+	@include avenir;
+	
+	.copy_wrap {
+		float: right;
+		text-align: right;
+		
+		.copy {
+			margin-top: 5px;
+			font-size: 12px;
+			
+			a {
+				&:first-child {
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+}

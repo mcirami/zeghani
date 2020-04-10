@@ -1,0 +1,338 @@
+.search {
+    @include padding(35px null 15px);
+    border-bottom: 1px solid $lightGreen;
+
+    .mobile_search {
+        display: none;
+
+        @include media($mobile) {
+            display: block;
+
+            h3 {
+                @include avenir();
+                text-align: center;
+            }
+
+            form {
+                margin: 0 10%;
+
+                input[type="text"] {
+                    width: 80%;
+                    height: 25px;
+                }
+
+                input[type="submit"] {
+                    @include padding(4px 8px);
+                    border: none;
+                    display: inline-flex;
+                    background: $gray;
+                }
+            }
+        }
+    }
+
+    .retailer {
+        @include span-columns(10);
+
+        @include media($tablet) {
+            @include span-columns(5);
+        }
+
+        @include media($mobile) {
+            display: none;
+        }
+
+        form {
+            float: right;
+            display: inline-block;
+
+            input[type="text"] {
+                width: 250px;
+                height: 25px;
+            }
+
+            input[type="submit"] {
+                @include padding(4.5px 8px);
+                border: none;
+                display: inline-flex;
+                background: $gray;
+            }
+
+
+            ::-webkit-input-placeholder {
+                @include avenir();
+                color: $black;
+                font-size: 12px;
+                text-align: center;
+                padding-top: 3px;
+
+            }
+
+            :-moz-placeholder {
+                @include avenir();
+                color: $black;
+                font-size: 12px;
+                text-align: center;
+                padding-top: 3px;
+            }
+
+            ::-moz-placeholder {
+                @include avenir();
+                color: $black;
+                font-size: 12px;
+                text-align: center;
+                padding-top: 3px;
+            }
+
+            :-ms-input-placeholder {
+                @include avenir();
+                color: $black;
+                font-size: 12px;
+                text-align: center;
+                padding-top: 3px;
+            }
+        }
+
+        h3 {
+            @include avenir;
+            @include padding(null 20px null);
+            text-transform: uppercase;
+            font-size: 13px;
+            margin: 0;
+            float: right;
+            display: inline-block;
+        }
+
+    }
+
+    .wish_list{
+        @include span-columns(2);
+
+        @include media($mobile) {
+            display: none;
+        }
+		
+		a {
+			color: $charcoal;
+		}
+
+        h3 {
+            @include avenir;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 13px;
+            float: left;
+            
+            &:after {
+				content: "";
+				background-image: url('../images/heart_icon_sprite.png');
+				position: absolute;
+				top: 50%;
+				right: -25px;
+				margin-top: -8px;
+				background-repeat: no-repeat;
+				overflow: hidden;
+				display: block;
+				width: 16px;
+				height: 15px;
+			}
+        }
+        
+        h3.has-wishlist-items {
+			
+			&:after {
+				content: "";
+				background-image: url('../images/heart_icon_sprite.png');
+				position: absolute;
+				background-position: 0 -15px;
+				top: 50%;
+				right: -25px;
+				margin-top: -8px;
+				background-repeat: no-repeat;
+				overflow: hidden;
+				display: block;
+				width: 16px;
+				height: 15px;
+			}
+		}
+    }
+}
+
+#global_header {
+    .header_info {
+        @include padding(50px 0);
+
+        @include media($mobile) {
+            @include padding(15px);
+            margin-bottom: 15px;
+        }
+
+        #logo {
+            @include span-columns(4);
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 0;
+            background-image: url('../images/zeghan_logo.png');
+            background-repeat: no-repeat;
+
+            @include media($mobile) {
+                display: none;
+            }
+
+            a {
+                color: transparent;
+                display: block;
+                min-height: 75px;
+            }
+        }
+
+        nav {
+            @include span-columns(8);
+            @include omega();
+            @include padding(20px null null);
+
+            @include media($tablet) {
+                @include span-columns(5);
+            }
+
+            @include media($mobile) {
+                display: none;
+            }
+
+            ul li {
+                display: inline-block;
+                position: relative;
+                margin-left: 20px;
+
+                @include media($tablet) {
+                    margin: 0;
+                }
+
+                @include media($mobile) {
+                    display: none;
+                }
+
+                a {
+                    @include avenir;
+                    @include padding(20px 35px);
+
+                    @include media($tablet) {
+                        @include padding(20px 25px);
+                    }
+
+                    text-transform: uppercase;
+                    color: $black;
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    background: $white;
+
+                    .sub-menu {
+                        @include padding(null 20px 20px 20px);
+                        display: inline-block;
+                        background: $white;
+                        z-index: 3;
+                        text-align: center;
+                    }
+                }
+
+                .sub-menu {
+                    position: absolute;
+                    display: none;
+                    width: 200px;
+
+                    li {
+                        @include padding(10px 7px);
+                        border-bottom: 1px solid $lightGreen;
+                        display: block;
+                        margin: 0;
+
+                        a {
+                            font-size: 10px;
+                            text-align: center;
+                            padding: 0;
+
+                            &:hover {
+                                color: darken($lightGreen, 15%);
+                            }
+                        }
+                    }
+                }
+
+                li.first-item {
+                    .sub-menu {
+                        margin-left: -32px;
+
+                    }
+                }
+            }
+        }
+
+        .mobile_nav {
+            display: none;
+
+            @include media($mobile) {
+                @include span-columns(2);
+                @include omega();
+                @include padding(7px);
+                border: 1px solid $lightGreen;
+                text-align: center;
+                float: right;
+            }
+        }
+
+        .mobile_logo {
+            display: none;
+
+            @include media($mobile) {
+                @include span-columns(2);
+                padding-bottom: 15px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .search_icon {
+            display: block;
+            width: 25px;
+            height: 25px;
+            float: right;
+            position: relative;
+            bottom: 22px;
+        }
+    }
+
+    .search_box {
+        display: none;
+        height: auto;
+        width: 450px;
+        position: absolute;
+        right: 0em;
+        left: auto;
+        z-index: 21;
+        padding: 1em;
+        margin: 54px 0;
+        background: rgba(255,255,255,0.9);
+        -webkit-box-shadow: 0 0 3px #e2e2e2;
+        -moz-box-shadow: 0 0 3px #e2e2e2;
+        box-shadow: 0 0 3px #e2e2e2;
+
+        label {
+            display: none;
+        }
+
+        .field {
+            height: 30px;
+            width: 340px;
+        }
+
+        .submit {
+            @include padding(8px 5px);
+            border: none;
+        }
+    }
+}

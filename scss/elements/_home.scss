@@ -1,0 +1,127 @@
+.homepage {
+	
+	//Swiper Styles
+	.swiper-container {
+		min-height: 385px;
+		border-top: 13px solid $lightGreen;
+		border-bottom: 13px solid $lightGreen;
+	}
+	
+	.swiper-wrapper {
+		height: 100%;
+	}
+	
+	.swiper-slide {
+		background-size: 100% 100%;
+		min-height: 385px;
+		
+		.slide_content {
+			top: 135px;
+			
+			h2 {
+				@include montserrat;
+				line-height: 26px;
+				font-size: 20px;
+				text-transform: uppercase;
+			}
+			
+			a {
+				@include avenir;
+				text-transform: uppercase;
+				text-decoration: underline;
+				font-size: 14px;
+			}
+			
+			&.white {
+				
+				h2 {
+					color: $white;
+				}
+				
+				a {
+					color: $white;
+				}
+			}
+			
+			&.black {
+				
+				h2 {
+					color: $black;
+				}
+				
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+	
+	.swiper-button-prev {
+		background-image: url('../images/slide_left.png');
+		width: 38px;
+		height: 35px;
+	}
+	
+	.swiper-button-next {
+		background-image: url('../images/slide_right.png');
+		width: 38px;
+		height: 35px;
+	}
+	
+	.swiper-pagination {
+		
+		
+		.swiper-pagination-bullet {
+			background: url('../images/slide_inactive.png');
+			height: 9px;
+			width: 9px;
+			
+			&.swiper-pagination-bullet-active {
+				background: url('../images/slide_active.png');
+			}
+		}
+	}
+	//End Swiper Styles
+	
+	.bottom_navigation {
+		padding: 55px 0px;
+		background-color: $white;
+		
+		.column {
+			@include span-columns(4);
+			text-align: center;
+			
+			&:last-child {
+				margin-right: 0px;
+			}
+			
+			h3 {
+				@include avenir;
+				margin: 0px;
+				display: inline-block;
+				font-size: 16px;
+				color: $black;
+				text-transform: uppercase;
+				border-top: 2px solid $lightGreen;
+				border-bottom: 2px solid $lightGreen;
+			}
+			
+			.extra {
+				width: 20%;
+				font-size: 9px;
+				text-align: center;
+				background-color: $lightGreen;
+				position: relative;
+				left: 40%;
+				
+				p {
+					line-height: 9px;
+					height: 12px;
+					font-size: 7px;
+					padding: 2px;
+					color: $black;
+				}
+			}
+		}
+	}
+}
